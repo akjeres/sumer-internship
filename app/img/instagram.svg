@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19.81" height="20" viewBox="0 0 19.81 20">
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="1693" y="369" width="19.81" height="20" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#fff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Instagram" class="cls-1" d="M1712.8,386.5v1.25a1.248,1.248,0,0,1-1.24,1.25h-17.32a1.241,1.241,0,0,1-1.24-1.25V384h0v-8.752h0v-5a1.241,1.241,0,0,1,1.24-1.25h17.32a1.248,1.248,0,0,1,1.24,1.25v1.25h0v15h0Zm-9.9-10c-2.28,0-2.48,2.5-2.48,2.5a2.475,2.475,0,1,0,4.95,0S1705.18,376.5,1702.9,376.5Zm7.42-5h-3.71v3.751h3.71V371.5Zm0,7.5h0v-1.25h-2.65a4.7,4.7,0,0,1,.18,1.25h0a4.95,4.95,0,1,1-9.9,0,5.136,5.136,0,0,1,.17-1.25h-2.65V386.5h14.85v-3.751h0V379Z" transform="translate(-1693 -369)"/>
+</svg>

@@ -24,11 +24,18 @@ body textarea:required:valid {
 	outline: none;
 }
 
+html {
+	background: #fff;
+}
+
 body{
 	overflow-x: hidden;
-	position: relative;	
+	position: relative;
+	max-width: 1440px;
+	margin: 0 auto;
 }
 * {
+	font-family: 'Open Sans', sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	line-height: normal;
