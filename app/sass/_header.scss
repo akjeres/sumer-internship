@@ -1,3 +1,120 @@
 .header {
-  
+  &_grid {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    &__item {
+        display: block;
+        width: 16.6667%;
+        height: 240px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        &.item-01{background-image: url(../img/header/photo-01.jpg)}
+        &.item-02{background-image: url(../img/header/photo-02.jpg)}
+        &.item-03{background-image: url(../img/header/photo-03.jpg)}
+        &.item-04{background-image: url(../img/header/photo-04.jpg)}
+        &.item-05{background-image: url(../img/header/photo-05.jpg)}
+        &.item-06{background-image: url(../img/header/photo-06.jpg)}
+        &.item-07{background-image: url(../img/header/photo-07.jpg)}
+        &.item-08{background-image: url(../img/header/photo-08.jpg)}
+        &.item-09{background-image: url(../img/header/photo-09.jpg)}
+        &.item-10{background-image: url(../img/header/photo-10.jpg)}
+        &.item-11{background-image: url(../img/header/photo-11.jpg)}
+        &.item-12{background-image: url(../img/header/photo-12.jpg)}
+    }
+    &__insta {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+    }
+    &::before {
+        content: '';
+        background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+  }
+  &_burger {
+      display: none;
+      &__button {
+          width: 50px;
+          height: 50px;
+          background: red;
+          display: block;
+          cursor: pointer;
+          position: fixed;
+          top: 15px;
+          left: 15px;
+          z-index: 2;
+          &-span {
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: #fff;
+            margin: auto;
+            transform: none;
+            will-change: transform;
+            transition: transform 0.3s ease;
+            &.top {transform: rotate(0deg) scale(1,1) translate(0, 15px)}
+            &.middle {transform: rotate(0deg) scale(1,1) translate(0, 23px)}
+            &.bottom {transform: rotate(0deg) scale(1,1) translate(0, 31px)}
+          }
+      }
+      &:checked {
+
+      }
+  }
+  &_nav {
+      background: #fff;
+      box-shadow: 0px 2px 8px rgba(0,0,0,0.11);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      &:before, &:after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          background: #fff;
+      }
+      &:before {left: -8px}
+      &:after {right: -8px}
+      &__link {
+        display: block;
+        font-size: 20px;
+        letter-spacing: 2px;
+        line-height: 24px;
+        color: $menu-color;
+        font-weight: 600;
+        margin: 38px 40px;
+        text-decoration: none;
+        text-shadow: none;
+        transition: all 0.3s ease;
+        &:visited {
+            color: $menu-color;
+            text-decoration: none;
+        }
+        &:hover {
+            text-decoration: none;
+            text-shadow: 0 0 1px lighten($menu-color, 10);
+        }
+        &:focus {
+            text-shadow: 0 0 1px lighten($menu-color, 5);
+        }
+        &:active {
+            color: darken($menu-color, 5);
+            text-shadow: 0 0 1px lighten($menu-color, 10);
+        }
+      }
+  }
 }
