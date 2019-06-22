@@ -1,3 +1,31 @@
 .header {
-  
+    &_nav {
+        position: fixed;
+        top: -280px;
+        padding-top: 80px;
+        left: 0;
+        z-index: 2;
+        width: 100vw;
+        display: block;
+        text-align: center;
+        transform: translateY(0);
+        will-change: transform;
+        transition: transform 0.2s 0.2s linear;
+        &__link {
+            margin: 15px;
+        }
+    }
+    &_burger {
+        &__button {
+            display: block;
+        }
+        &:checked {
+            & ~ .header {
+                &_nav {
+                    transform: translateY(280px);
+                    transition: transform 0.2s linear;
+                }
+            }
+        }
+    }
 }

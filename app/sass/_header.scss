@@ -47,12 +47,12 @@
           width: 50px;
           height: 50px;
           background: red;
-          display: block;
+          display: none;
           cursor: pointer;
           position: fixed;
           top: 15px;
           left: 15px;
-          z-index: 2;
+          z-index: 3;
           &-span {
             display: block;
             width: 40px;
@@ -60,18 +60,44 @@
             background: #fff;
             margin: auto;
             transform: none;
-            will-change: transform;
-            transition: transform 0.3s ease;
+            will-change: transform, background-color;
+            transition: transform 0.3s ease,
+                        background-color 0.3s ease;
             &.top {transform: rotate(0deg) scale(1,1) translate(0, 15px)}
             &.middle {transform: rotate(0deg) scale(1,1) translate(0, 23px)}
             &.bottom {transform: rotate(0deg) scale(1,1) translate(0, 31px)}
           }
+          &::before {
+            content: '';
+            height: 0;
+            position: fixed;
+            top: 251px;
+            left: 0;
+            background: rgba(0,0,0,0.2);
+            width: 100vw;
+            will-change: height;
+            transition: height 0.2s linear;
+          }
       }
       &:checked {
-
+        & ~ .header_burger__button {
+                &::before {
+                    height: calc(100vh - 251px);
+                    transition: height 0.2s 0.2s linear;
+                }
+            .header_burger__button {
+                &-span {
+                    background-color: $menu-color;
+                    &.top {transform: rotate(45deg) scale(1.4,1.4) translate(12px, 12px)}
+                    &.middle {transform: rotate(0deg) scale(0,0) translate(0, 23px)}
+                    &.bottom {transform: rotate(-45deg) scale(1.4,1.4) translate(-10px, 10px)}
+                }
+            }
+        }
       }
   }
   &_nav {
+      user-select: none;
       background: #fff;
       box-shadow: 0px 2px 8px rgba(0,0,0,0.11);
       display: flex;
