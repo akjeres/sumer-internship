@@ -30,6 +30,28 @@
         position: absolute;
         top: 13px;
         right: 20px;
+        text-decoration: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        filter: brightness(100%);
+        transition: filter 0.3s ease;
+        .insta {
+            &_logo {
+                margin-right: 5px;
+            }
+            &_text {
+                font-size: 15px;
+                letter-spacing: 0px;
+                line-height: 24px;
+                color: #ffffff;
+                font-weight: bold;
+            }
+        }
+        &:visited {filter: brightness(100%)}
+        &:hover {filter: brightness(90%)}
+        &:focus {filter: brightness(95%)}
+        &:active {filter: brightness(87.5%)}
     }
     &::before {
         content: '';
@@ -46,13 +68,17 @@
       &__button {
           width: 50px;
           height: 50px;
-          background: red;
+          background: transparent;
           display: none;
           cursor: pointer;
           position: fixed;
           top: 15px;
           left: 15px;
           z-index: 3;
+          border: 2px solid #fff;
+          border-radius: 5px;
+          will-change: border-color;
+          transition: border-color 0.3s ease;
           &-span {
             display: block;
             width: 40px;
@@ -63,9 +89,9 @@
             will-change: transform, background-color;
             transition: transform 0.3s ease,
                         background-color 0.3s ease;
-            &.top {transform: rotate(0deg) scale(1,1) translate(0, 15px)}
-            &.middle {transform: rotate(0deg) scale(1,1) translate(0, 23px)}
-            &.bottom {transform: rotate(0deg) scale(1,1) translate(0, 31px)}
+            &.top {transform: rotate(0deg) scale(1,1) translate(0, 13px)}
+            &.middle {transform: rotate(0deg) scale(1,1) translate(0, 21px)}
+            &.bottom {transform: rotate(0deg) scale(1,1) translate(0, 29px)}
           }
           &::before {
             content: '';
@@ -81,6 +107,7 @@
       }
       &:checked {
         & ~ .header_burger__button {
+            border-color: $menu-color;
                 &::before {
                     height: calc(100vh - 251px);
                     transition: height 0.2s 0.2s linear;
@@ -88,9 +115,9 @@
             .header_burger__button {
                 &-span {
                     background-color: $menu-color;
-                    &.top {transform: rotate(45deg) scale(1.4,1.4) translate(12px, 12px)}
-                    &.middle {transform: rotate(0deg) scale(0,0) translate(0, 23px)}
-                    &.bottom {transform: rotate(-45deg) scale(1.4,1.4) translate(-10px, 10px)}
+                    &.top {transform: rotate(45deg) scale(1.4,1.4) translate(11px, 11px)}
+                    &.middle {transform: rotate(0deg) scale(0,0) translate(0, 21px)}
+                    &.bottom {transform: rotate(-45deg) scale(1.4,1.4) translate(-9px, 9px)}
                 }
             }
         }
