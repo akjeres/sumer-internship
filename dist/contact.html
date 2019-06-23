@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Contact | Dirty Dogs</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="description" content=""/>
+    <meta name="theme-color" content="#000">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+<body>
+    <noscript>
+        <p class="warning">JavaScript is disabled in your browser. Please enable JavaScript in your browser or upgrade to a JavaScript-capable browser to use Dirty Dogs</p>
+    </noscript>
+    <header class="header">
+        <section class="header_grid">
+            <div class="header_grid__item item-01"></div>
+            <div class="header_grid__item item-02"></div>
+            <div class="header_grid__item item-03"></div>
+            <div class="header_grid__item item-04"></div>
+            <div class="header_grid__item item-05"></div>
+            <div class="header_grid__item item-06"></div>
+            <div class="header_grid__item item-07"></div>
+            <div class="header_grid__item item-08"></div>
+            <div class="header_grid__item item-09"></div>
+            <div class="header_grid__item item-10"></div>
+            <div class="header_grid__item item-11"></div>
+            <div class="header_grid__item item-12"></div>
+            <a href="https://www.instagram.com/explore/tags/hotdogs/" class="header_grid__insta" target="_blank">
+                <img class="insta_logo" src="./img/instagram.svg">
+                <span class="insta_text">#hotdogs</span>
+            </a>
+        </section>
+        <input type="checkbox" id="burger" class="header_burger">
+        <label for="burger" class="header_burger__button">
+            <span class="header_burger__button-span top"></span>
+            <span class="header_burger__button-span middle"></span>
+            <span class="header_burger__button-span bottom"></span>
+        </label>
+        <nav class="header_nav">
+            <a href="./index.html#menu" class="header_nav__link">Menu</a>
+            <a href="#catering" class="header_nav__link">Catering</a>
+            <a href="./index.html#about" class="header_nav__link">About Us</a>
+            <a href="./contact.html" class="header_nav__link">Contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="main_contact">
+            <div class="container">
+                <div class="main_contact__wrapper">
+                    <form class="main_contact__form">
+                        <input type="text" name="name" placeholder="Name" autocomplete="off" class="main_contact__form-input">
+                        <input type="email" name="email" placeholder="Email" autocomplete="off" class="main_contact__form-input">
+                        <textarea name="comment" rows="3" placeholder="Comment" autocomplete="off" class="main_contact__form-input main_contact__form-textarea"></textarea>
+                        <input type="submit" name="submit" value="Submit" class="main_contact__form-input main_contact__form-submit">
+                    </form>
+                </div>
+            </div>
+            <div class="modal modal-success">
+                <p class="modal_message">Your message has been received</p>
+            </div>
+            <div class="modal modal-error">
+                <p class="modal_message">There was some error while receiving your message</p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <p class="footer_wrapper_copy">&copy;&nbsp;2016 Dirty Dogs all rights reserved</p>
+                <ul class="footer_wrapper__list">
+                    <li class="footer_wrapper__list-item">
+                        <a class="footer_wrapper__list-item--link" target="_blank" href="https://goo.gl/maps/fxKHxJsKBaM1Rwtq7">274 Marconi Blvd. Columbus, Ohio 43215</a></li>
+                    <li class="footer_wrapper__list-item">614.538.0095</li>
+                    <li class="footer_wrapper__list-item">
+                        <a href="./contact.html" class="footer_wrapper__list-item--link">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scripts.min.js"></script>
+</body>
+</html>
