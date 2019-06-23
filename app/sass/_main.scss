@@ -1,3 +1,48 @@
 .main {
-    
+    &_about {
+        background: $about-bkg;
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 926px;
+            margin: 0 auto;
+            .about {
+                &_logo {
+                    display: block;
+                    width: auto;
+                    height: auto;
+                    margin: 110px auto 20px auto;
+                }
+                &_description {
+                    font-size: 56px;
+                    line-height: 70px;
+                    letter-spacing: -2px;
+                    color: $text-color;
+                    text-align: center;
+                    margin: 0 auto 80px auto;
+                }
+                &_link {
+                    font-size: 20px;
+                    letter-spacing: -1px;
+                    line-height: 25px;
+                    color: #ffffff;
+                    font-weight: 600;
+                    padding: 20px 37px;
+                    border-radius: 6px;
+                    background-color: $button-color;
+                    margin: 0 auto 173px auto;
+                    text-decoration: none;
+                    text-align: center;
+                    will-change: background-color;
+                    transition: background-color 0.3s ease;
+                    &:visited {background-color: $button-color}
+                    &:hover {background-color: darken($button-color, 10)}
+                    &:focus {background-color: darken($button-color, 5)}
+                    &:active {background-color: darken($button-color, 15)}
+                }
+            }
+        }
+    }
 }

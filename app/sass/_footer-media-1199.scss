@@ -1,3 +1,9 @@
 .footer {
-  
+  &_wrapper {
+      display: block;
+      text-align: center;
+      &_copy {
+          margin-bottom: 10px;
+      }
+  }
 }

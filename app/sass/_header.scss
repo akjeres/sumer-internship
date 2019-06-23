@@ -68,27 +68,26 @@
       &__button {
           width: 50px;
           height: 50px;
-          background: transparent;
+          background: rgba(255,255,255,0.25);
           display: none;
           cursor: pointer;
           position: fixed;
           top: 15px;
           left: 15px;
           z-index: 3;
-          border: 2px solid #fff;
-          border-radius: 5px;
+          border: 2px solid $button-color;
+          border-radius: 6px;
           will-change: border-color;
           transition: border-color 0.3s ease;
           &-span {
             display: block;
             width: 40px;
             height: 2px;
-            background: #fff;
+            background: $button-color;
             margin: auto;
             transform: none;
-            will-change: transform, background-color;
-            transition: transform 0.3s ease,
-                        background-color 0.3s ease;
+            will-change: transform;
+            transition: transform 0.3s ease;
             &.top {transform: rotate(0deg) scale(1,1) translate(0, 13px)}
             &.middle {transform: rotate(0deg) scale(1,1) translate(0, 21px)}
             &.bottom {transform: rotate(0deg) scale(1,1) translate(0, 29px)}
@@ -107,14 +106,12 @@
       }
       &:checked {
         & ~ .header_burger__button {
-            border-color: $menu-color;
                 &::before {
                     height: calc(100vh - 251px);
                     transition: height 0.2s 0.2s linear;
                 }
             .header_burger__button {
                 &-span {
-                    background-color: $menu-color;
                     &.top {transform: rotate(45deg) scale(1.4,1.4) translate(11px, 11px)}
                     &.middle {transform: rotate(0deg) scale(0,0) translate(0, 21px)}
                     &.bottom {transform: rotate(-45deg) scale(1.4,1.4) translate(-9px, 9px)}

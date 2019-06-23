@@ -1,3 +1,40 @@
 .footer {
-  
+  background: $footer-bkg;
+  padding: 21px 0;
+  &_wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &_copy, &__list {
+        line-height: 26px;
+        font-size: 14px;
+        color: $text-color;
+        font-weight: normal;
+      }
+      &__list {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &-item {
+            padding: 0 20px;
+            border-right: 1px solid $text-color;
+            color: $text-color;
+            font-weight: normal;
+            &:first-child {padding-left: 0}
+            &:last-child {
+                padding-right: 0;
+                border-right: 0;
+            }
+            &--link {
+                text-decoration: none;
+                color: $text-color;
+                &:visited {color: $text-color}
+                &:hover {color: darken($text-color, 10)}
+                &:focus {color: darken($text-color, 5)}
+                &:active {color: darken($text-color, 15)}
+            }
+          }
+      }
+  }
 }
