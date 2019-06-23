@@ -3,3 +3,36 @@ $text-color: #555559;
 $about-bkg: #fbfafa;
 $button-color: #286782;
 $footer-bkg: #efefef;
+
+@mixin placeholder($color, $focus) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        transition: color 0.3s ease;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        transition: color 0.3s ease;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        transition: color 0.3s ease;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        transition: color 0.3s ease;
+    }
+    &:focus {
+        &::-webkit-input-placeholder {
+            color: $focus;
+        }
+        &::-moz-placeholder {
+            color: $focus;
+        }
+        &:-ms-input-placeholder {
+            color: $focus;
+        }
+        &:-moz-placeholder {
+            color: $focus;
+        }
+    }
+}

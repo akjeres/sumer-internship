@@ -65,10 +65,16 @@
                     <form class="main_contact__form">
                         <input type="text" name="name" placeholder="Name" autocomplete="off" class="main_contact__form-input">
                         <input type="email" name="email" placeholder="Email" autocomplete="off" class="main_contact__form-input">
-                        <textarea name="comment" placeholder="Comment" autocomplete="off" class="main_contact__form-input main_contact__form-textarea"></textarea>
+                        <textarea name="comment" rows="3" placeholder="Comment" autocomplete="off" class="main_contact__form-input main_contact__form-textarea"></textarea>
                         <input type="submit" name="submit" value="Submit" class="main_contact__form-input main_contact__form-submit">
                     </form>
                 </div>
+            </div>
+            <div class="modal modal-success">
+                <p class="modal_message">Your message has been received</p>
+            </div>
+            <div class="modal modal-error">
+                <p class="modal_message">There was some error while receiving your message</p>
             </div>
         </section>
     </main>

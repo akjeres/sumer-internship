@@ -35,4 +35,7 @@
             }
         }
     }
+    &_contact {
+        min-height: calc(100vh - 40vw - 97px);
+    }
 }
