@@ -16,4 +16,23 @@
             }
         }
     }
+    &_menu {
+        &__item {
+            
+            .menu {
+                &_title {
+                    font-size: 18px;
+                    &:before {
+                        width: 20px;
+                        top: 12px;
+                        left: -35px;
+                    }
+                }
+                &_description {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
 }

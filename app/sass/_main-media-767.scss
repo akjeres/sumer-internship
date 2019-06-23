@@ -1,3 +1,33 @@
 .main {
-  
+  &_menu {
+        &__item {
+            flex-direction: column-reverse;
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+            }
+            .menu {
+                &_img, &_content {
+                    width: 100%;
+                }
+                &_img {
+                    height: 100vw;
+                }
+                &_content {
+                    padding: 30px 10%;
+                }
+                &_title {
+                    font-size: 18px;
+                    &:before {
+                        width: 20px;
+                        top: 12px;
+                        left: -35px;
+                    }
+                }
+                &_description {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
 }
